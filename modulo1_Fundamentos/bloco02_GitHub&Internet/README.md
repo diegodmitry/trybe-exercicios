@@ -6,8 +6,10 @@
   
   ### Configuração
   O primeiro passo é configurar sua identidade, seu nome e endereço de e-mail, isso é importante pois cada commit usa esta informação, e ela é carimbada de forma imutável nos commits que você criar. Para configurar isso digite o comando abaixo em seu terminal: 
-  ```git config --global user.name "Seu nome"
-  git config --global user.email seuemail@exemplo.br```
+  
+  ```git config --global user.name "Seu nome"```
+  
+  ```git config --global user.email seuemail@exemplo.br```
 
   ### Editor
   Um outro ponto legal de se configurar é o editor onde você poderá abrir o arquivo de configuração do Git , .gitconfig , fica fácil de você visualizar as configurações do Git e também adicionar outras que julgue necessário. Para isso execute o comando à seguir no seu terminal: 
@@ -26,9 +28,11 @@
   1. Abra seu terminal e digite o comando abaixo. Ele cria uma nova chave SSH, usando o seu email como rótulo.
   ```ssh-keygen -t rsa -b 4096 -C seuemail@email.com```
   2. Durante o processo irá aparecer escrito no terminal Enter a file in which to save the key , quando isso acontecer pressione Enter para aceitar a localização padrão /home/you/.ssh/id_rsa . 
-  3. AO pedir a senha, digite a sua escolha:
-  ```Enter passphrase (empty for no passphrase): [Type a passphrase]
-  Enter same passphrase again: [Type passphrase again]```
+  3. Ao pedir a senha, digite a sua escolha:
+
+  ```Enter passphrase (empty for no passphrase): [Type a passphrase]```
+  
+  ```Enter same passphrase again: [Type passphrase again]```
 
   ### Adicionando sua chave SSH ao ssh-agent
   1. Primeiro você deve iniciar o ssh-agent em background:
@@ -45,9 +49,11 @@
 
   # Agora utilize o comando abaixo para copiar o conteúdo da sua chave id_rsa.pub
   # Para garantir que o conteúdo foi copiado dê Ctrl + V em um editor de texto
-  xclip -sel clip < ~/.ssh/id_rsa.pub```
+  xclip -sel clip < ~/.ssh/id_rsa.pub
+  ```
   
   Caso o xclip não funcione, execute o comando abaixo e copie manualmente a saída do terminal. 
+  
   ```cat ~/.ssh/id_rsa.pub```
 
   Entre no seu GitHub e siga os passos abaixo:
@@ -63,13 +69,20 @@
 
   ## Parte 4 - O seu repositório no GitHub
   Foram praticados os comandos:
-  ```git init
+  ```
+     git init
      git add .
-     git commit -m 'Message'```
-  Criado um repositório público no GItHub e adicionado a URL ao repositório local
+     git commit -m 'Message'
+  ```
+  Criado um repositório público no GitHub e adicionado a URL ao repositório local
+  
   ```git remote add origin "URL_DO_REPOSITÓRIO"```
+  
   Verificado se está certo a URL remota
+  
   ```git remote -v```
+  
   Agora que tudo está devidamente configurado e verificado
+  
   ```git push origin master```
 
