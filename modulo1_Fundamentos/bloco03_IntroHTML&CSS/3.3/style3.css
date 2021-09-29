@@ -1,0 +1,44 @@
+div:hover{
+  border: 2px solid black;
+}
+.primaria {
+  background-color: orangered;
+}
+.secundaria {
+  background-color: rgb(139, 77, 138);
+}
+.complementar {
+  background-color: #808000;
+}
+.escura {
+  background-color: #471a12;
+  color: aliceblue;
+}
+.clara {
+  background-color: tomato;
+}
+
+/* 3 */
+.primaria h3 {
+  font-family: 'Courier New', Courier, monospace;
+}
+.secundaria h3 {
+  text-decoration: underline;
+}
+.complementar h3 {
+  text-decoration: overline;
+  /* 4 */
+  font-size: 50px;
+}
+.escura h3 {
+  text-transform: uppercase;
+}
+.clara h3 {
+  text-decoration: line-through;
+  
+}
+/* 5 */
+/* Selecting odd divs */
+div:nth-child(odd) {
+  font-style: italic;
+}
