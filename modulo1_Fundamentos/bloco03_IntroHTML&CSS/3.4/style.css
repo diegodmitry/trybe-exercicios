@@ -1,4 +1,62 @@
+body {
+  font-family: Lato, HelveticaNeueBold, HelveticaNeue-Bold,
+    "Helvetica Neue Bold", HelveticaBold, Helvetica-Bold, "Helvetica Bold",
+    HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #efefee;
+}
+
+/* HEADER */
+.navbar {
+  background-color: #fff;
+  /* x(h), y(v), blur and color  */
+  box-shadow: 0px 2px 5px rgb(73, 73, 73);
+  z-index: 10;
+  margin-bottom: 30px;
+}
+.navbar ul {
+  /*Defini o alinhamento no eixo Y, diplay flex*/
+  align-items: center;
+  /* Define um container como flex("inline"), todos os filhos diretos recebe o contexto do flex */
+  display: flex;
+  /* Defini o alinhamento pelo eixo X */
+  justify-content: space-around;
+  height: 55px;
+  /* Centralizando ul */
+  margin: auto;
+  max-width: 1280px;
+}
+.navbar li a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* MAIN */
+main {
+  max-width: 1248px;
+}
+
+article {
+  margin: 0 auto;
+  background-color: #fff;
+  max-width: 768px;
+  border: 1px solid #d7d7d7;
+  border-radius: 10px;
+}
+h1 {
+  margin-top: 0;
+}
+.cientifico {
+  background-color: aqua;
+}
+
+/* FOOTER */
 footer {
-  background-color: #D6D6D7;
+  background-color: #d6d6d7;
   color: whitesmoke;
 }
+
+/* Sources:  
+  1. https://dev.to/
+  2. https://www.w3schools.com
+  3. css-tricks.com */
