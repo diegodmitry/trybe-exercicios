@@ -33,30 +33,92 @@ body {
 
 /* MAIN */
 main {
-  max-width: 1248px;
+  /* Utilizado flex para colocar main e aside adjacentes */
+  display: flex;
+  justify-content: center;
 }
 
 article {
-  margin: 0 auto;
   background-color: #fff;
   max-width: 768px;
   border: 1px solid #d7d7d7;
   border-radius: 10px;
+  flex-shrink: 2;
 }
 h1 {
+  font-size: 46px;
   margin-top: 0;
+  text-align: center;
+  padding-top: 40px;
 }
-.cientifico {
-  background-color: aqua;
+.cientifico,
+.fatos,
+.descricao,
+.visao,
+.reprod,
+.alimentacao,
+.ref {
+  margin: auto;
+  padding: 4% 8%;
+  font-size: 18px;
+}
+/* Table */
+.cientifico table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+  
+}
+td,
+th {
+  border: 1px solid #ddd;
+  font-size: 1.1vw;
+}
+th {
+  font-weight: bold;
+}
+/* Line */
+hr {
+  width: 25%;
+  opacity: 0.1;
+  border: 1px solid #090909;
+  margin: 45px auto 0px auto;
+}
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+/* ASIDE */
+aside {
+  margin-left: 20px;
+}
+aside iframe {
+  border-radius: 10px;
 }
 
 /* FOOTER */
 footer {
-  background-color: #d6d6d7;
+  background-color: #333;
   color: whitesmoke;
+  height: 100px;
+  margin-top: 20px;
+  box-shadow: 0px -2px 2px rgb(49, 49, 49);
+}
+footer p {
+  padding-top: 20px;
+  text-align: center;
 }
 
 /* Sources:  
   1. https://dev.to/
   2. https://www.w3schools.com
-  3. css-tricks.com */
+  3. css-tricks.com 
+  Table
+  https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiB9L_f6qnzAhVupJUCHXxkApMQFnoECAgQAQ&url=https%3A%2F%2Fwww.w3schools.com%2Fhtml%2Fhtml_tables.asp&usg=AOvVaw2QldKwC3yGh0nrJmXUOp91
+  Border-collapse
+  https://developer.mozilla.org/en-US/docs/Web/CSS/border-collapse
+
+  Responsive font size
+  https://bits.theorem.co/css-pro-tips-responsive-font-sizes-and-when-to-use-which-units/
+  */
