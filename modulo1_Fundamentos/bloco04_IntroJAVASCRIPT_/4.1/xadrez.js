@@ -2,7 +2,6 @@
 
 const pec = 'pawn';
 const pecLowerCase = pec.toLowerCase();
-// console.log(pecLowerCase);
 if (pecLowerCase === 'pawn' || pecLowerCase === 'peao') {
   console.log('one, two squares forward or one square diagonally.');
 } else if (pecLowerCase === 'rook' || pecLowerCase === 'torre') {
