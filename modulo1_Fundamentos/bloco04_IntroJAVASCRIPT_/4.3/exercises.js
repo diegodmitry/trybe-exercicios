@@ -66,4 +66,50 @@ for (let i = 0; i < n3 - 1; i++) {
 }
 console.log(pyr);
 
+// 5.
+const n4 = 7;
+let hPyr = "";
+// External Loop
+for (let i = 1; i <= n4 - 3; i++) {
+  // printing spaces
+  for (let j = 1; j <= n4 - i; j++) {
+    hPyr += " ";
+  }
+  
+  // printing stars
+  for (let k = 0; k <  2 * i - 1; k++) {
+    if (i === 1 || i === (n4 - 3)) {
+      hPyr += '*' // base
+    } else {
+      if (k === 0 || k === 2 * i - 2) {
+        hPyr += '*';
+      } else {
+        hPyr += ' ';
+      }
+    }    
+  }
+
+  hPyr += '\n'
+}
+console.log(hPyr);
+
 // Source: https://www.tutorialstonight.com/js/javascript-star-pattern.php
+
+// 6.
+
+const n5 = 50;
+for (let i = 0; i <= n5; i++) {
+  
+  if(n5 < 2) {
+    return console.log('Número menor que 2 não é primo');
+  }
+  
+  if (n5 % 2 === 0 || n5 % 3 === 0) {
+    return console.log(`O númenro ${n5} não é primo.`);
+  }
+
+  if(n5 % 2 !== 0) {
+    return console.log(`O número ${n5} é primo`);
+  }
+  
+}
