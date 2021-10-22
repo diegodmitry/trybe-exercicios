@@ -33,7 +33,6 @@ const makeLi = (array) => {
     liDays.innerText = array[i];
     
     // add class holiday
-    console.log(liDays.textContent);
     if(liDays.textContent === '24' || liDays.textContent === '25' || liDays.textContent === '31') liDays.classList.add('holiday');
 
     // add class friday
@@ -44,3 +43,22 @@ const makeLi = (array) => {
   }
 };
 makeLi(dezDaysList)
+
+// 2.
+const holiday = (feriados) => {
+  // create button
+  const btnHoliday = document.createElement('button');
+  
+  
+  // add id
+  btnHoliday.id = 'btn-holiday';
+  
+  // add value
+  btnHoliday.textContent = feriados;
+
+  // add btnHoliday to DOM
+  document.querySelector('.buttons-container').appendChild(btnHoliday);
+
+
+};
+holiday('feriados')
