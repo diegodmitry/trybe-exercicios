@@ -182,7 +182,6 @@ taskDiv();
 const taskCalendar = () => {
   const days = document.querySelectorAll(".day");
   const task = document.querySelector(".task");
-  console.log(typeof task.style.backgroundColor);
 
   // loop over days and add click event
   for (let i = 0; i < days.length; i++) {
@@ -194,3 +193,23 @@ const taskCalendar = () => {
   }
 };
 taskCalendar();
+
+// BONUS
+const bonus = () => {
+  const input = document.getElementById('task-input');
+  console.log(input);
+  const btnAdd = document.querySelector('#btn-add');
+  console.log(btnAdd);
+  btnAdd.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    if(input.value.length > 0) {
+      calTask(input.value)
+    } else {
+      alert('Preencha o INPUT!')
+    }
+    input.value = '';
+  })
+
+};
+bonus();
