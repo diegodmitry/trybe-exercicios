@@ -156,3 +156,12 @@ const calTask = (string) => {
   document.querySelector('.my-tasks').appendChild(span);
 }
 calTask('cozinhar');
+
+// 8.
+const color = (string) => {
+  const div = document.createElement('div');
+  div.classList = 'task';
+  div.style.backgroundColor = string;
+  document.querySelector('.my-tasks').appendChild(div)
+};
+color('green');
