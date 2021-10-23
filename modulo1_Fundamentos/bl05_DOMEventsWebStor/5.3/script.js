@@ -148,3 +148,11 @@ const mouseOut = () => {
   })
 };
 mouseOut();
+
+// 7. 
+const calTask = (string) => {
+  const span = document.createElement('span');
+  span.textContent = string;
+  document.querySelector('.my-tasks').appendChild(span);
+}
+calTask('cozinhar');
