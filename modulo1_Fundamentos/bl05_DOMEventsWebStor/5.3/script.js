@@ -99,9 +99,9 @@ function rgb(r, g, b) {
 }
 
 // 4.
+// create button
+const btnFriday = document.createElement('button');
 const friday = (string) => {
-  // create button
-  const btnFriday = document.createElement('button');
 
   // button name
   btnFriday.textContent = string;
@@ -114,3 +114,24 @@ const friday = (string) => {
 
 };
 friday('Sexta-feira')
+
+// 5.
+const fnFriday = (e) => {
+  // console.log(e);
+  const fridays = document.querySelectorAll('.friday');
+  // console.log(fridays);
+  for (let i = 0; i < fridays.length; i++) {
+    console.log(fridays[i].style.color === '');
+    if(fridays[i].style.color === '') {
+      fridays[i].style.color = 'black';
+    } else {
+      fridays[i].style.color = "";
+    }
+  }
+  // console.log(e.target.style.color === "");
+  // if(e.target.style.color == "") e.target.style.color = 'lightblue';
+  // else {
+  //   e.target.style.color === "";
+  // }
+};
+btnFriday.addEventListener('click', fnFriday);
