@@ -81,12 +81,13 @@ const holiday = (feriados) => {
 
   // add click event
   // 3.
-  btnHoliday.addEventListener("click", function(e) {
+  btnHoliday.addEventListener("click", function (e) {
     const holidays = document.querySelectorAll(".holiday");
     for (let i = 0; i < holidays.length; i++) {
-    if(holidays[i].style.backgroundColor === "") holidays[i].style.backgroundColor = rgb(172, 224, 171);
+      if (holidays[i].style.backgroundColor === "")
+        holidays[i].style.backgroundColor = rgb(172, 224, 171);
       else {
-        holidays[i].style.backgroundColor = ""
+        holidays[i].style.backgroundColor = "";
       }
     }
   });
@@ -100,9 +101,8 @@ function rgb(r, g, b) {
 
 // 4.
 // create button
-const btnFriday = document.createElement('button');
+const btnFriday = document.createElement("button");
 const friday = (string) => {
-
   // button name
   btnFriday.textContent = string;
 
@@ -111,57 +111,86 @@ const friday = (string) => {
 
   // add btnFriday to DOM
   document.querySelector(".buttons-container").appendChild(btnFriday);
-
 };
-friday('Sexta-feira')
+friday("Sexta-feira");
 
 // 5.
 const fnFriday = (e) => {
   // console.log(e);
-  const fridays = document.querySelectorAll('.friday');
+  const fridays = document.querySelectorAll(".friday");
   // console.log(fridays);
   for (let i = 0; i < fridays.length; i++) {
-    console.log(fridays[i].style.color === '');
-    if(fridays[i].style.color === '') {
-      fridays[i].style.color = 'black';
+    console.log(fridays[i].style.color === "");
+    if (fridays[i].style.color === "") {
+      fridays[i].style.color = "black";
     } else {
       fridays[i].style.color = "";
     }
   }
 };
-btnFriday.addEventListener('click', fnFriday);
+btnFriday.addEventListener("click", fnFriday);
 
 // 6.
 const mouseOver = () => {
-  const days = document.getElementById('days');
+  const days = document.getElementById("days");
 
-  days.addEventListener('mouseover', function (e) {
-    console.log(e.target.style);
+  days.addEventListener("mouseover", function (e) {
     e.target.style.fontSize = "x-large";
-  })
+  });
 };
 mouseOver();
 const mouseOut = () => {
-  const days = document.getElementById('days');
-  days.addEventListener('mouseout', function(e){
+  const days = document.getElementById("days");
+  days.addEventListener("mouseout", function (e) {
     e.target.style.fontSize = "medium";
-  })
+  });
 };
 mouseOut();
 
-// 7. 
+// 7.
 const calTask = (string) => {
-  const span = document.createElement('span');
+  const span = document.createElement("span");
   span.textContent = string;
-  document.querySelector('.my-tasks').appendChild(span);
-}
-calTask('cozinhar');
+  document.querySelector(".my-tasks").appendChild(span);
+};
+calTask("cozinhar");
 
 // 8.
 const color = (string) => {
-  const div = document.createElement('div');
-  div.classList = 'task';
+  const div = document.createElement("div");
+  div.classList = "task";
   div.style.backgroundColor = string;
-  document.querySelector('.my-tasks').appendChild(div)
+  document.querySelector(".my-tasks").appendChild(div);
 };
-color('green');
+color("green");
+
+// 9.
+const taskDiv = () => {
+  const task = document.querySelector(".task");
+  task.addEventListener("click", function (e) {
+    // console.log(e.target.classList);
+    if (!e.target.classList.contains("selected")) {
+      e.target.classList = "task selected";
+    } else {
+      e.target.className = "task";
+    }
+  });
+};
+taskDiv();
+
+// 10.
+const taskCalendar = () => {
+  const days = document.querySelectorAll(".day");
+  const task = document.querySelector(".task");
+  console.log(typeof task.style.backgroundColor);
+
+  // loop over days and add click event
+  for (let i = 0; i < days.length; i++) {
+    days[i].addEventListener("click", function (e) {
+      if (task.classList.contains("selected"))
+        e.target.style.color = task.style.backgroundColor;
+      else console.log("tarefa não está selecionada");
+    });
+  }
+};
+taskCalendar();
