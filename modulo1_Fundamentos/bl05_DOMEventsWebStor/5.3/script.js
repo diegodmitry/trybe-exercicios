@@ -128,10 +128,23 @@ const fnFriday = (e) => {
       fridays[i].style.color = "";
     }
   }
-  // console.log(e.target.style.color === "");
-  // if(e.target.style.color == "") e.target.style.color = 'lightblue';
-  // else {
-  //   e.target.style.color === "";
-  // }
 };
 btnFriday.addEventListener('click', fnFriday);
+
+// 6.
+const mouseOver = () => {
+  const days = document.getElementById('days');
+
+  days.addEventListener('mouseover', function (e) {
+    console.log(e.target.style);
+    e.target.style.fontSize = "x-large";
+  })
+};
+mouseOver();
+const mouseOut = () => {
+  const days = document.getElementById('days');
+  days.addEventListener('mouseout', function(e){
+    e.target.style.fontSize = "medium";
+  })
+};
+mouseOut();
