@@ -1,0 +1,18 @@
+.select {
+  background-color: aquamarine;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0;
+}
+
+.selectBackgroundColor, .selectTextColor, .selectFontSize, .selectFontType, .selectLineSpacing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+h4 {
+  margin: 0;
+}
