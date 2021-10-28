@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Form</title>
+  </head>
+  <body>
+    <form id="form" action="" method="get" enctype="multipart/form-data">
+      <fieldset>
+        <label for="nome-input">Nome:</label>
+        <input
+          type="text"
+          name="nome"
+          id="nome-input"
+          maxlength="40"
+          required
+        />
+
+        <label for="email-input">E-Mail:</label>
+        <input type="email" name="email" id="email-input" required />
+
+        <label for="cpf-input">CPF:</label>
+        <input type="text" name="cpf" id="cpf-input" required />
+
+        <label for="end-input">Endereço:</label>
+        <input
+          type="text"
+          name="endereco"
+          id="end-input"
+          maxlength="200"
+          required
+        />
+
+        <label for="cid-input">Cidade:</label>
+        <input
+          type="text"
+          name="cidade"
+          id="cid-input"
+          maxlength="28"
+          required
+        />
+
+        <select name="Estado" id="select-estado">
+          <!-- Gerar option via JavaScript -->
+        </select>
+
+        <!-- radio button -->
+        <label for="casa-input">Casa:</label>
+        <input
+          type="radio"
+          name="moradia"
+          id="casa-input"
+          value="casa"
+          required
+        />
+        <label for="ap-input">Apartamento:</label>
+        <input
+          type="radio"
+          name="moradia"
+          id="ap-input"
+          value="apartamento"
+          required
+        />
+      </fieldset>
+
+      <fieldset>
+        <p>Resumo do Currículo</p>
+        <textarea
+          name="resumo-currículo"
+          id="resumo-currículo"
+          maxlength="1000"
+          cols="50"
+          rows="10"
+          required
+        ></textarea>
+
+        <label for="cargo-input">Cargo:</label>
+        <input
+          type="text"
+          name="cargo"
+          id="cargo-input"
+          maxlength="40"
+          required
+        />
+
+        <label for="desc-cargo-input">Descrição do Cargo:</label>
+        <input
+          type="text"
+          name="desc-cargo-input"
+          id="desc-cargo-input"
+          maxlength="500"
+          required
+        />
+
+        <label for="date-input">Data:</label>
+        <input
+          id="date-input"
+          name="date-input"
+          type="text"
+          min="1"
+          placeholder="DD/MM/AAAA"
+          required
+        />
+
+        <button id="btn" type="submit">Submit</button>
+      </fieldset>
+    </form>
+    <button id="btnCleanField">Clear Field</button>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
