@@ -13,7 +13,7 @@ const descCargo = document.querySelector("#desc-cargo-input");
 const select = document.getElementById("select-estado");
 const date = document.getElementById("date-input");
 const btn = document.getElementById("btn");
-const btnClean = document.querySelector('#btnCleanField');
+const btnClean = document.querySelector("#btnCleanField");
 
 const states = [
   "Acre",
@@ -66,7 +66,7 @@ const checkInputs = () => {
   const cargoValue = cargo.value.trim();
   const descCargoValue = descCargo.value.trim();
 
-  const arrDates = date.value.split("/");
+  // const arrDates = date.value.split("/");
 
   if (usernameValue === "") {
     status = false;
@@ -86,26 +86,26 @@ const checkInputs = () => {
     status = false;
   }
 
-  if (arrDates[0] < 0 || arrDates[0] > 31) {
-    status = false;
-    return alert("Invalid Day");
-  } else if (arrDates[1] < 0 || arrDates[1] > 12) {
-    status = false;
-    return alert("Invalid Month");
-  } else if (arrDates[2] < 0) {
-    status = false;
-    return alert("Invalid Year");
-  } else if (arrDates.length < 3) {
-    status = false;
-    return alert("You need fill, DD/MM/YYYY");
-  }
+  // Validation in the date field
+  // if (arrDates[0] < 0 || arrDates[0] > 31) {
+  //   status = false;
+  //   return alert("Invalid Day");
+  // } else if (arrDates[1] < 0 || arrDates[1] > 12) {
+  //   status = false;
+  //   return alert("Invalid Month");
+  // } else if (arrDates[2] < 0) {
+  //   status = false;
+  //   return alert("Invalid Year");
+  // } else if (arrDates.length < 3) {
+  //   status = false;
+  //   return alert("You need fill, DD/MM/YYYY");
+  // }
 
   return status;
 };
 
 // To get the HTML form data
 const divForm = () => {
-
   const obj = {};
   obj.name = form.children[0].children[1].value;
   obj.email = form.children[0].children[3].value;
@@ -118,12 +118,12 @@ const divForm = () => {
   obj.cargo = form.children[1].children[3].value;
   obj.descriptCargo = form.children[1].children[5].value;
   obj.date = form.children[1].children[7].value;
-  
+
   for (const key in obj) {
     if (Object.hasOwnProperty.call(obj, key)) {
       const element = obj[key];
       const div = document.createElement("div");
-      div.className = 'allValues'
+      div.className = "allValues";
 
       div.textContent = element;
       form.appendChild(div);
@@ -142,25 +142,31 @@ form.addEventListener("submit", (e) => {
 
 // check which radio btn is selected
 // using ternary operator
-const isCheckedRadioBtn = (item) => item[12].checked ? item[12].value : item[14].value;
+const isCheckedRadioBtn = (item) =>
+  item[12].checked ? item[12].value : item[14].value;
 
 // Btn Clean
-btnClean.addEventListener('click', (e) => {
-  const [...divAll] = document.querySelectorAll('.allValues');
-  
-  for (const el of form) {
+btnClean.addEventListener("click", (e) => {
+  const [...divAll] = document.querySelectorAll(".allValues");
 
-    if (el.type === 'text' || el.type === 'email' || el.type === 'textarea') {
-      el.value = '';
+  for (const el of form) {
+    if (el.type === "text" || el.type === "email" || el.type === "textarea") {
+      el.value = "";
     }
   }
-  divAll.forEach(el => el.remove());
+  divAll.forEach((el) => el.remove());
 });
 
 // Modal
-var myModal = document.getElementById('myModal')
-var myInput = document.getElementById('myInput')
+// var myModal = document.getElementById('myModal')
+// var myInput = document.getElementById('myInput')
 
-myModal.addEventListener('shown.bs.modal', function () {
-  myInput.focus()
-})
+// myModal.addEventListener('shown.bs.modal', function () {
+//   myInput.focus()
+// })
+
+// Using DatePickerX library
+window.addEventListener("DOMContentLoaded", () => {
+  const inputDate = document.getElementById("date-input");
+  inputDate.DatePickerX.init({ format: "dd/mm/yyyy" });
+});
