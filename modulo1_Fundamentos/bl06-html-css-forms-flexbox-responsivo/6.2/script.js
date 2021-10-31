@@ -1,6 +1,6 @@
 const form = document.querySelector("#form");
-const username = document.querySelector("#nome-input");
-const email = document.querySelector("#email-input");
+// const username = document.querySelector("#nome-input");
+// const email = document.querySelector("#email-input");
 const cpf = document.querySelector("#cpf-input");
 const endereco = document.querySelector("#end-input");
 const cidade = document.querySelector("#cid-input");
@@ -57,8 +57,8 @@ const checkInputs = () => {
   let status = true;
 
   // get values from input
-  const usernameValue = username.value.trim();
-  const emailValue = email.value.trim();
+  // const usernameValue = username.value.trim();
+  // const emailValue = email.value.trim();
   const cpfValue = cpf.value.trim();
   const enderecoValue = endereco.value.trim();
   const cidadeValue = cidade.value.trim();
@@ -152,14 +152,6 @@ btnClean.addEventListener("click", (e) => {
   }
   divAll.forEach((el) => el.remove());
 });
-
-// Modal
-// var myModal = document.getElementById('myModal')
-// var myInput = document.getElementById('myInput')
-
-// myModal.addEventListener('shown.bs.modal', function () {
-//   myInput.focus()
-// })
 
 // Using DatePickerX library
 window.addEventListener("DOMContentLoaded", () => {
