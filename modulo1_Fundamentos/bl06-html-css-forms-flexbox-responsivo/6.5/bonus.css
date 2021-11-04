@@ -1,0 +1,37 @@
+.blue, .red {
+  height: 120px;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.red {
+  background-color: lightcoral;
+}
+
+.black, .yellow {
+  height: 400px;
+}
+
+.black {
+  background-color: lightslategrey;
+}
+
+.yellow {
+  background-color: lightgoldenrodyellow
+}
+
+.green {
+  background-color: lightgreen;
+  height: 250px;
+}
+
+@media screen and (max-width: 575px) {
+  .blue, .red {
+    height: 60px;
+  }
+  .yellow {
+    display: none;
+  }
+}
