@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 05%;
+
+  margin: 17% auto;
+  /* max-height: 500px; */
+}
+
+span {
+  text-align: center;
+}
