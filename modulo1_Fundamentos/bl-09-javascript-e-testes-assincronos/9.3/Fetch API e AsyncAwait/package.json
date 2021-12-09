@@ -1,0 +1,14 @@
+{
+  "name": "fetch_api",
+  "version": "1.0.0",
+  "description": "testing api with fetch",
+  "main": "fetchAPI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "diegodmitry",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.6"
+  }
+}
