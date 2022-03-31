@@ -1,4 +1,4 @@
-#20.1
+# 20.1
 
 ## O que eu aprendi?
 Conceitos fundamentais sobre um banco de dados  e sobre como o SQL é usado na criação de tabelas. Além disso, aprendi a usar a ferramenta MySQL Workbench para praticar os comandos SQL. 
