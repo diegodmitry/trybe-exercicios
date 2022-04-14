@@ -9,4 +9,4 @@ const sweepstake = () => {
     const secondAnswer = readlineSync.question('Would you like trying again? ');
     if(secondAnswer.toLowerCase() === "yes") sweepstake();
 };
-sweepstake();
+module.exports = sweepstake;

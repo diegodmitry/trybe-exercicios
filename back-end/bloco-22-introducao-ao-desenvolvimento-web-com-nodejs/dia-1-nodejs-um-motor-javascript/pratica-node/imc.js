@@ -1,9 +1,9 @@
 const readline = require('readline-sync');
 
-const peso = readline.questionFloat('Qual o seu peso? ');
-const altura = readline.question('Qual a sua altura? ');
 
-const calculaIMC = (peso, altura) => {
+const calculaIMC = () => {
+  const peso = readline.questionFloat('Qual o seu peso? ');
+  const altura = readline.question('Qual a sua altura? ');
   const imc = peso / (altura * altura);
   console.log(`Seu IMC é: ${imc.toFixed(2)}` );
 
@@ -29,4 +29,5 @@ const calculaIMC = (peso, altura) => {
   }
   console.log('Situação: Obesidade graus III e IV');
 }
-calculaIMC(peso, altura);
+
+module.exports = calculaIMC;

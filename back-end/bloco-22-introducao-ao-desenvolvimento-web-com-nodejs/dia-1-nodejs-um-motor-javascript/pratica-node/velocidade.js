@@ -10,4 +10,4 @@ function calculaVelocidadeMed() {
   console.log(`Velocidade média: ${(velocidadeMedia * 3.6).toFixed(2)} km/h`);
 
 }
-calculaVelocidadeMed();
+module.exports = calculaVelocidadeMed;
