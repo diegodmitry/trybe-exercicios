@@ -1,0 +1,15 @@
+{
+  "name": "praticamocha_chai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculadora.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "author": "Diego Dmitry",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.2"
+  }
+}
