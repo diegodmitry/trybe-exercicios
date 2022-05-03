@@ -11,4 +11,9 @@ const getCep = async (cep) => {
   }
 };
 
-module.exports = getCep;
+const create = async (cep, logradouro, bairro, localidade, uf) => {
+  const query = 'INSERT INTO ceps (cep, logradouro, bairro, localidade, uf) VALUES (?, ?, ?, ?, ?);'
+  return await connection.execute(query, [cep, logradouro, bairro, localidade, uf]);
+};
+
+module.exports = { getCep, create };
