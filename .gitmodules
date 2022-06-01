@@ -1,3 +1,6 @@
 [submodule "modulo2_FrontEnd/bl-10-introducao-a-react/10.2/modulo2_FrontEnd/bl-10-introducao-a-react/10.2/coldplay"]
 	path = modulo2_FrontEnd/bl-10-introducao-a-react/10.2/modulo2_FrontEnd/bl-10-introducao-a-react/10.2/coldplay
 	url = https://github.com/diegodmitry/trybe-exercicios
+[submodule "back-end/bloco-25-deployment/dia-1-infraestrutura-deploy-com-heroku/secDeployOnHeroku"]
+	path = back-end/bloco-25-deployment/dia-1-infraestrutura-deploy-com-heroku/secDeployOnHeroku
+	url = git@github.com:diegodmitry/trybe-exercicios.git
